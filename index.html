@@ -4,72 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Martina Mchenga | AI Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
     }
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #ffffff;
-      color: #333;
-    }
-    .main-container {
-      display: flex;
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem;
-      gap: 2rem;
-    }
-    .sidebar {
-      flex: 1;
-      min-width: 200px;
-    }
-    .sidebar h3 {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-    .sidebar ul li {
-      margin-bottom: 0.5rem;
-    }
-    .sidebar ul li a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    .sidebar ul li a:hover {
-      text-decoration: underline;
-    }
-    .main-content {
-      flex: 3;
+      color: #222;
     }
     header {
       text-align: center;
-      padding: 2rem 1rem 1rem 1rem;
-      background-color: #f9f9f9;
+      padding: 3rem 1rem 2rem 1rem;
+      background-color: #f2f2f2;
       border-bottom: 1px solid #ddd;
     }
+    header img {
+      width: 110px;
+      border-radius: 100%;
+      margin-bottom: 1rem;
+    }
     header h1 {
-      margin: 0;
       font-size: 2rem;
-      font-weight: 400;
+      font-weight: 600;
+      margin: 0;
     }
     header p {
-      margin: 0.5rem 0 0 0;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #666;
+      margin: 0.3rem 0 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
     h2 {
-      color: #b54b28;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
       border-bottom: 1px solid #eee;
       padding-bottom: 0.5rem;
+      color: #b54b28;
     }
     ul {
       padding-left: 1.25rem;
+    }
+    section {
+      margin-bottom: 2rem;
     }
     .submissions a {
       display: block;
@@ -84,56 +68,46 @@
 </head>
 <body>
   <header>
+    <img src="https://github.com/MartinaMchenga/Mchenga_portifolio/blob/main/PHOTO.jpg?raw=true" alt="Martina Mchenga">
     <h1>Martina Mchenga</h1>
     <p>Health and Development Economist</p>
   </header>
 
-  <div class="main-container">
-    <aside class="sidebar">
-      <h3>IN THIS SECTION</h3>
-      <ul>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#about-course">About the Course</a></li>
-        <li><a href="#weekly-submissions">Weekly Submissions</a></li>
-      </ul>
-    </aside>
+  <div class="container">
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>
+        I am a Health and Development Economist with over 10 years of experience in health policy analysis and financing across multiple African countries.
+        My expertise spans quantitative and qualitative analysis, cost-effectiveness evaluations, and policy design to advance Universal Health Coverage,
+        gender-responsive financing, and adolescent health outcomes. I currently serve as a Post-Doctoral Fellow at the University of Cape Town.
+      </p>
+    </section>
 
-    <div class="main-content">
-      <section id="about-me">
-        <h2>About Me</h2>
-        <p>
-          I am a Health and Development Economist with over 10 years of experience in health policy analysis and financing across multiple African countries.
-          My expertise spans quantitative and qualitative analysis, cost-effectiveness evaluations, and policy design to advance Universal Health Coverage,
-          gender-responsive financing, and adolescent health outcomes. I currently serve as a Post-Doctoral Fellow at the University of Cape Town.
-        </p>
-      </section>
-
-      <section id="about-course">
-        <h2>About the Course</h2>
-        <p><strong>Generative AI for Work & Research Productivity</strong><br>
+    <section id="about-course">
+      <h2>About the Course</h2>
+      <p><strong>Generative AI for Work & Research Productivity</strong><br>
         This live 8-week course introduces participants to no-code AI tools to automate work processes in research and beyond. Ideal for researchers, students,
         and professionals in the health and life sciences.
-        </p>
-        <ul>
-          <li>Automate document, spreadsheet, and data workflows</li>
-          <li>Organize research and literature with AI</li>
-          <li>Build custom chatbots for your projects</li>
-          <li>Create scientific visuals and presentations</li>
-          <li>Apply skills in a hands-on capstone project</li>
-          <li>Live workshops, help sessions, and community forums</li>
-        </ul>
-      </section>
+      </p>
+      <ul>
+        <li>Automate document, spreadsheet, and data workflows</li>
+        <li>Organize research and literature with AI</li>
+        <li>Build custom chatbots for your projects</li>
+        <li>Create scientific visuals and presentations</li>
+        <li>Apply skills in a hands-on capstone project</li>
+        <li>Live workshops, help sessions, and community forums</li>
+      </ul>
+    </section>
 
-      <section id="weekly-submissions">
-        <h2>My Weekly Submissions</h2>
-        <div class="submissions">
-          <p>Links to weekly projects will be added below as the course progresses:</p>
-          <!-- Example:
-          <a href="#">Week 1: Automating Literature Review with AI</a>
-          -->
-        </div>
-      </section>
-    </div>
+    <section id="weekly-submissions">
+      <h2>My Weekly Submissions</h2>
+      <div class="submissions">
+        <p>Links to weekly projects will be added below as the course progresses:</p>
+        <!-- Example:
+        <a href="#">Week 1: Automating Literature Review with AI</a>
+        -->
+      </div>
+    </section>
   </div>
 </body>
 </html>
