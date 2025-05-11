@@ -4,115 +4,131 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Martina Mchenga | AI Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
-    * {
-      box-sizing: border-box;
+    :root{
+      --brand:#b54b28;
+      --cream:#f4f0e5;
+      --green:#003c32;
     }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #222;
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#ffffff;color:#333;line-height:1.6;}
+    /* ---------- NAV ---------- */
+    .nav{
+      background:var(--cream);
+      border-bottom:1px solid #d5d2c9;
+      padding:0.8rem 1.5rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      position:sticky;
+      top:0;
+      z-index:20;
     }
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem 1rem;
-      background-color: #f2f2f2;
-      border-bottom: 1px solid #ddd;
+    .brand{font-weight:600;font-size:1.1rem;color:var(--brand);}
+    .nav ul{list-style:none;display:flex;gap:1.25rem;}
+    .nav a{text-decoration:none;color:#333;font-size:0.9rem;}
+    .nav a:hover{color:var(--brand);}  
+    /* ---------- HERO ---------- */
+    .hero{display:flex;flex-wrap:wrap;min-height:450px;}
+    .hero .left{
+      flex:1 1 400px;
+      background:var(--cream); /* switched to light yellow matching nav */
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem;
     }
-    header img {
-      width: 110px;
-      border-radius: 100%;
-      margin-bottom: 1rem;
+    .hero .left img{width:100%;max-width:350px;height:auto;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,0.15);}
+    .hero .right{
+      flex:1 1 400px;
+      background:var(--green);
+      color:#f1f1f1;
+      padding:3rem 2.5rem;
+      display:flex;flex-direction:column;justify-content:center;
     }
-    header h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin: 0;
+    .hero .right h1{font-size:2.4rem;font-weight:600;margin-bottom:0.5rem;line-height:1.2;}
+    .hero .right h2{font-size:1.4rem;font-weight:600;margin-bottom:1.2rem;color:var(--cream);} 
+    .hero .right p{font-size:1rem;}
+    /* ---------- SECTIONS ---------- */
+    section.content{max-width:1000px;margin:3rem auto;padding:0 1.5rem;}
+    section.content h3{font-size:1.6rem;font-weight:600;color:var(--green);margin-bottom:0.8rem;}
+    section.content p,section.content li{font-size:1rem;}
+    section.content ul{padding-left:1.25rem;margin-top:0.5rem;}
+    /* submissions list */
+    .submissions ul{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem;}
+    .submissions li{
+      background:var(--cream);
+      border:1px solid #e4e1d8;
+      border-radius:8px;
+      padding:1rem;
+      text-align:center;
+      font-weight:600;
+      color:var(--brand);
     }
-    header p {
-      font-size: 1rem;
-      color: #666;
-      margin: 0.3rem 0 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 0.5rem;
-      color: #b54b28;
-    }
-    ul {
-      padding-left: 1.25rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    .submissions a {
-      display: block;
-      margin: 0.5rem 0;
-      color: #007bff;
-      text-decoration: none;
-    }
-    .submissions a:hover {
-      text-decoration: underline;
+    .submissions li a{text-decoration:none;color:inherit;}
+    .submissions li a:hover{text-decoration:underline;}
+    /* footer */
+    footer{text-align:center;font-size:0.8rem;color:#888;margin:3rem 0 1rem;}
+    @media(max-width:700px){
+      .hero .right{padding:2rem 1.5rem;}
+      .hero .right h1{font-size:1.8rem;}
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://github.com/MartinaMchenga/Mchenga_portifolio/blob/main/PHOTO.jpg?raw=true" alt="Martina Mchenga">
-    <h1>Martina Mchenga</h1>
-    <p>Health and Development Economist</p>
-  </header>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="brand">Martina Mchenga, PhD</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about-course">Course</a></li>
+      <li><a href="#weekly-submissions">Submissions</a></li>
+    </ul>
+  </nav>
 
-  <div class="container">
-    <section id="about-me">
-      <h2>About Me</h2>
-      <p>
-        I am a Health and Development Economist with over 10 years of experience in health policy analysis and financing across multiple African countries.
-        My expertise spans quantitative and qualitative analysis, cost-effectiveness evaluations, and policy design to advance Universal Health Coverage,
-        gender-responsive financing, and adolescent health outcomes. I currently serve as a Post-Doctoral Fellow at the University of Cape Town.
-      </p>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="left">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzoAAAWQCAIAAAAdhKZRAAEAAElEQVR4nOz96ZLrSrIuiH3uHgGQzFx71a66dYZ7+komk8z6sfQ2" alt="Martina Mchenga" />
+    </div>
+    <div class="right">
+      <h1>Martina Mchenga</h1>
+      <h2>Health & Development Economist</h2>
+      <p>Passionate about leveraging evidence &amp; economic insights to advance Universal Health Coverage, gender‑responsive financing, and adolescent health in Africa.</p>
+    </div>
+  </section>
 
-    <section id="about-course">
-      <h2>About the Course</h2>
-      <p><strong>Generative AI for Work & Research Productivity</strong><br>
-        This live 8-week course introduces participants to no-code AI tools to automate work processes in research and beyond. Ideal for researchers, students,
-        and professionals in the health and life sciences.
-      </p>
-      <ul>
-        <li>Automate document, spreadsheet, and data workflows</li>
-        <li>Organize research and literature with AI</li>
-        <li>Build custom chatbots for your projects</li>
-        <li>Create scientific visuals and presentations</li>
-        <li>Apply skills in a hands-on capstone project</li>
-        <li>Live workshops, help sessions, and community forums</li>
-      </ul>
-    </section>
+  <!-- About the Course -->
+  <section class="content" id="about-course">
+    <h3>Generative AI for Work & Research Productivity</h3>
+    <p>This live 8‑week certification teaches no‑code AI tools to automate research and professional workflows.</p>
+    <ul>
+      <li>Automate document, spreadsheet, and data tasks</li>
+      <li>Organize research and literature with AI</li>
+      <li>Build custom chatbots for your projects</li>
+      <li>Create scientific visuals and presentations</li>
+      <li>Complete a hands‑on capstone project</li>
+      <li>Engage via live workshops, help sessions, and forums</li>
+    </ul>
+  </section>
 
-    <section id="weekly-submissions">
-      <h2>Course Submissions</h2>
-      <p>Weekly deliverables will appear below as the cohort progresses.</p>
-      <ul class="weeks" style="list-style:none;padding-left:0;">
-        <li>Week&nbsp;1&nbsp;&mdash;&nbsp;Coming Soon</li>
-        <li>Week&nbsp;2&nbsp;&mdash;&nbsp;Coming Soon</li>
-        <li>Week&nbsp;3&nbsp;&mdash;&nbsp;Coming Soon</li>
-        <li>Week&nbsp;4&nbsp;&mdash;&nbsp;Coming Soon</li>
-        <li>Week&nbsp;5&nbsp;&mdash;&nbsp;Coming Soon</li>
-        <li>Week&nbsp;6&nbsp;&mdash;&nbsp;Coming Soon</li>
-        <li>Week&nbsp;7&nbsp;&mdash;&nbsp;Coming Soon</li>
-        <li>Week&nbsp;8&nbsp;&mdash;&nbsp;Capstone (TBD)</li>
-      </ul>
-    </section>
-  </div>
+  <!-- Weekly Submissions -->
+  <section class="content submissions" id="weekly-submissions">
+    <h3>Weekly Submissions</h3>
+    <p>Links will appear as each deliverable is finalized:</p>
+    <ul>
+      <li>Week&nbsp;1 – Coming Soon</li>
+      <li>Week&nbsp;2 – Coming Soon</li>
+      <li>Week&nbsp;3 – Coming Soon</li>
+      <li>Week&nbsp;4 – Coming Soon</li>
+      <li>Week&nbsp;5 – Coming Soon</li>
+      <li>Week&nbsp;6 – Coming Soon</li>
+      <li>Week&nbsp;7 – Coming Soon</li>
+      <li>Week&nbsp;8 – Capstone (TBD)</li>
+    </ul>
+  </section>
+
+  <footer>&copy; 2025 Martina Mchenga</footer>
 </body>
 </html>
