@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Martina Mchenga | AI Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     :root{
-      --brand:#b54b28;
+      --brand:#6286e2;
       --cream:#f4f0e5;
       --green:#003c32;
+      --panel-blue:#6286e2; /* matches image background */
     }
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Inter',sans-serif;background:#ffffff;color:#333;line-height:1.6;}
@@ -27,13 +28,13 @@
     }
     .brand{font-weight:600;font-size:1.1rem;color:var(--brand);}
     .nav ul{list-style:none;display:flex;gap:1.25rem;}
-    .nav a{text-decoration:none;color:#333;font-size:0.9rem;}
-    .nav a:hover{color:var(--brand);}  
+    .nav a{color:var(--panel-blue);text-decoration:none;font-size:0.9rem;}
+    .nav a:hover{color:var(--panel-blue);text-decoration:underline;}  
     /* ---------- HERO ---------- */
     .hero{display:flex;flex-wrap:wrap;min-height:450px;}
     .hero .left{
       flex:1 1 400px;
-      background:var(--cream); /* switched to light yellow matching nav */
+      background:var(--cream);
       display:flex;
       align-items:center;
       justify-content:center;
@@ -42,17 +43,17 @@
     .hero .left img{width:100%;max-width:350px;height:auto;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,0.15);}
     .hero .right{
       flex:1 1 400px;
-      background:var(--green);
-      color:#f1f1f1;
+      background:var(--panel-blue);
+      color:#ffffff;
       padding:3rem 2.5rem;
       display:flex;flex-direction:column;justify-content:center;
     }
-    .hero .right h1{font-size:2.4rem;font-weight:600;margin-bottom:0.5rem;line-height:1.2;}
+    .hero .right h1{font-family:'Merriweather',serif;font-size:2.4rem;font-weight:700;margin-bottom:0.8rem;line-height:1.3;}
     .hero .right h2{font-size:1.4rem;font-weight:600;margin-bottom:1.2rem;color:var(--cream);} 
     .hero .right p{font-size:1rem;}
     /* ---------- SECTIONS ---------- */
     section.content{max-width:1000px;margin:3rem auto;padding:0 1.5rem;}
-    section.content h3{font-size:1.6rem;font-weight:600;color:var(--green);margin-bottom:0.8rem;}
+    section.content h3{font-size:1.6rem;font-weight:600;color:var(--panel-blue);margin-bottom:0.8rem;}
     section.content p,section.content li{font-size:1rem;}
     section.content ul{padding-left:1.25rem;margin-top:0.5rem;}
     /* submissions list */
@@ -90,14 +91,15 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="left">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzoAAAWQCAIAAAAdhKZRAAEAAElEQVR4nOz96ZLrSrIuiH3uHgGQzFx71a66dYZ7+komk8z6sfQ2" alt="Martina Mchenga" />
+      <img src="https://github.com/MartinaMchenga/Mchenga_portifolio/blob/main/PHOTO.jpg?raw=true" alt="Martina Mchenga" style="width:100%;max-width:350px;height:auto;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,0.15);"/>
     </div>
     <div class="right">
-      <h1>Martina Mchenga</h1>
-      <h2>Health & Development Economist</h2>
+      <h1><span class="greet">Hello,</span><br><span class="intro">My name is Martina Mchenga, a Health Economist.</span></h1>
       <p>Passionate about leveraging evidence &amp; economic insights to advance Universal Health Coverage, gender‑responsive financing, and adolescent health in Africa.</p>
     </div>
   </section>
+
+  
 
   <!-- About the Course -->
   <section class="content" id="about-course">
