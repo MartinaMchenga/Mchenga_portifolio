@@ -29,58 +29,27 @@
     .brand{font-weight:600;font-size:1.1rem;color:var(--brand);line-height:1.2;}
     .nav ul{list-style:none;display:flex;gap:1.25rem;}
     .nav a{color:var(--panel-blue);text-decoration:none;font-size:0.9rem;}
-    .nav a:hover{color:var(--panel-blue);text-decoration:underline;}  
+    .nav a:hover{text-decoration:underline;}
     /* ---------- HERO ---------- */
     .hero{display:flex;flex-wrap:wrap;min-height:450px;}
-    .hero .left{
-      flex:1 1 400px;
-      background:var(--cream);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:2rem;
-    }
-    .hero .left img{width:100%;max-width:350px;height:auto;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,0.15);}    
-    .hero .right{
-      flex:1 1 400px;
-      background:var(--panel-blue);
-      color:#ffffff;
-      padding:3rem 2.5rem;
-      display:flex;flex-direction:column;justify-content:center;
-    }
+    .hero .left{flex:1 1 400px;background:var(--cream);display:flex;align-items:center;justify-content:center;padding:2rem;}
+    .hero .left img{width:100%;max-width:350px;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,0.15);}
+    .hero .right{flex:1 1 400px;background:var(--panel-blue);color:#fff;padding:3rem 2.5rem;display:flex;flex-direction:column;justify-content:center;}
     .hero .right h1{font-family:'Merriweather',serif;font-size:2.4rem;font-weight:700;margin-bottom:0.8rem;line-height:1.3;}
-    .hero .right h2{font-size:1.4rem;font-weight:600;margin-bottom:1.2rem;color:var(--cream);} 
     .hero .right p{font-size:1rem;}
-    /* ---------- SECTIONS ---------- */
+    /* ---------- CONTENT ---------- */
     section.content{max-width:1000px;margin:3rem auto;padding:0 1.5rem;}
     section.content h3{font-size:1.6rem;font-weight:600;color:var(--panel-blue);margin-bottom:1.2rem;}
-    section.content p,section.content li{font-size:1rem;}
-
     /* ---------- WEEKLY SUBMISSIONS ---------- */
-    .weeks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;list-style:none;padding-left:0;margin-top:0.5rem;}
-    .week-card{
-      background:var(--cream);
-      border:1px solid #e4e1d8;
-      border-radius:10px;
-      padding:1.25rem 1rem 1.5rem;
-      display:flex;flex-direction:column;justify-content:space-between;min-height:140px;box-shadow:0 2px 6px rgba(0,0,0,0.07);
-      transition:transform 0.15s ease, box-shadow 0.15s ease;
-    }
+    .weeks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;list-style:none;padding:0;}
+    .week-card{background:var(--cream);border:1px solid #e4e1d8;border-radius:10px;padding:1.25rem 1rem 1.5rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:transform 0.15s,box-shadow 0.15s;}
     .week-card:hover{transform:translateY(-4px);box-shadow:0 6px 12px rgba(0,0,0,0.1);}   
     .week-card h4{font-size:1.1rem;font-weight:600;margin-bottom:0.35rem;color:var(--brand);}   
     .week-card p{font-size:0.9rem;line-height:1.45;color:#444;flex-grow:1;}
     .week-card a{margin-top:0.75rem;align-self:flex-start;background:var(--panel-blue);color:#fff;padding:0.35rem 0.8rem;font-size:0.85rem;border-radius:4px;text-decoration:none;}
     .week-card a:hover{background:#526fcc;}
-
     /* footer */
     footer{text-align:center;font-size:0.8rem;color:#888;margin:3rem 0 1rem;}
-    @media(max-width:700px){
-      .hero .right{padding:2rem 1.5rem;}
-      .hero .right h1{font-size:1.8rem;}
-    }
-    /* hide publications until selected */
-    #publications{display:none;}
-    #publications:target{display:block;}
   </style>
 </head>
 <body>
@@ -96,21 +65,18 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero" id="home">
-    <div class="left">
-      <img src="https://github.com/MartinaMchenga/Mchenga_portifolio/blob/main/PHOTO.jpg?raw=true" alt="Martina Mchenga" style="width:100%;max-width:350px;height:auto;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,0.15);"/>
-    </div>
+    <div class="left"><img src="https://github.com/MartinaMchenga/Mchenga_portifolio/blob/main/PHOTO.jpg?raw=true" alt="Martina Mchenga"/></div>
     <div class="right">
-      <h1><span class="greet">Hello,</span><br><span class="intro">My name is Martina Mchenga, a Health Economist.</span></h1>
-      <p>Passionate about leveraging evidence & economic insights to advance Universal Health Coverage, gender‑responsive financing, and adolescent health in Africa.</p>
+      <h1>Hello,<br><span class="intro">My name is Martina Mchenga, a Health Economist.</span></h1>
+      <p>Passionate about leveraging evidence &amp; economic insights to advance Universal Health Coverage, gender‑responsive financing, and adolescent health in Africa.</p>
     </div>
   </section>
 
-  <!-- About the Course -->
+  <!-- Course -->
   <section class="content" id="about-course">
-    <h3>Generative AI for Work & Research Productivity</h3>
-    <p>This live 8‑week certification teaches no‑code AI tools to automate research and professional workflows.</p>
+    <h3>Generative AI for Work &amp; Research Productivity</h3>
     <ul>
       <li>Automate document, spreadsheet, and data tasks</li>
       <li>Organize research and literature with AI</li>
@@ -125,32 +91,22 @@
   <section class="content" id="weekly-submissions">
     <h3>Weekly Submissions</h3>
     <ul class="weeks-grid">
-      <li class="week-card">
-        <h4>Week 1</h4>
-        <p>Prompt engineering & portfolio setup.</p>
-        <a href="https://martinamchenga.github.io/Mchenga_portifolio/" target="_blank" rel="noopener">View&nbsp;Submission</a>
-      </li>
-      <li class="week-card">
-        <h4>Week 2</h4>
-        <p>Data wrangling with no‑code AI.</p>
-        <span style="opacity:0.6;font-size:0.85rem;">Coming&nbsp;soon</span>
-      </li>
-      <li class="week-card">
-        <h4>Week 3</h4>
-        <p>Literature triage & synthesis automation.</p>
-        <span style="opacity:0.6;font-size:0.85rem;">Coming&nbsp;soon</span>
-      </li>
-      <li class="week-card">
-        <h4>Week 4</h4>
-        <p>Custom chatbots for repetitive tasks.</p>
-        <span style="opacity:0.৬;font-size:0.85rem;">Coming&nbsp;soon</span>
-      </li>
-      <li class="week-card">
-        <h4>Week 5</h4>
-        <p>AI‑assisted analysis & visualization.</p>
-        <span style="opacity:0.6;font-size:0.85rem;">Coming&nbsp;soon</span>
-      </li>
-      <li class="week-card">
-        <h4>Week 6</h4>
-        <p>Automating slide decks & reports.</p>
-        <span style="opacity:0.6;font-size:0.85rem;">Coming&nbsp
+      <li class="week-card"><h4>Week&nbsp;1</h4><p>Prompt engineering &amp; portfolio setup.</p><a href="https://martinamchenga.github.io/Mchenga_portifolio/" target="_blank">View Submission</a></li>
+      <li class="week-card"><h4>Week&nbsp;2</h4><p>Data wrangling with no‑code AI.</p><span style="opacity:.6;font-size:.85rem;">Coming soon</span></li>
+      <li class="week-card"><h4>Week&nbsp;3</h4><p>Literature triage &amp; synthesis automation.</p><span style="opacity:.6;font-size:.85rem;">Coming soon</span></li>
+      <li class="week-card"><h4>Week&nbsp;4</h4><p>Custom chatbots for repetitive tasks.</p><span style="opacity:.6;font-size:.85rem;">Coming soon</span></li>
+      <li class="week-card"><h4>Week&nbsp;5</h4><p>AI‑assisted analysis &amp; visualization.</p><span style="opacity:.6;font-size:.85rem;">Coming soon</span></li>
+      <li class="week-card"><h4>Week&nbsp;6</h4><p>Automating slide decks &amp; reports.</p><span style="opacity:.6;font-size:.85rem;">Coming soon</span></li>
+      <li class="week-card"><h4>Week&nbsp;7</h4><p>Capstone prep &amp; feedback loops.</p><span style="opacity:.6;font-size:.85rem;">Coming soon</span></li>
+      <li class="week-card"><h4>Week&nbsp;8</h4><p>Capstone delivery &amp; reflection.</p><span style="opacity:.6;font-size:.85rem;">Coming soon</span></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>&copy; 2025 Martina Mchenga</footer>
+
+  <!-- Chatbot Embed -->
+  <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/06/01/18/20250601182734-KHL8SS57.js"></script>
+</body>
+</html>
