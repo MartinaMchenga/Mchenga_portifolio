@@ -53,22 +53,25 @@
     .hero .right p{font-size:1rem;}
     /* ---------- SECTIONS ---------- */
     section.content{max-width:1000px;margin:3rem auto;padding:0 1.5rem;}
-    section.content h3{font-size:1.6rem;font-weight:600;color:var(--panel-blue);margin-bottom:0.8rem;}
+    section.content h3{font-size:1.6rem;font-weight:600;color:var(--panel-blue);margin-bottom:1.2rem;}
     section.content p,section.content li{font-size:1rem;}
-    section.content ul{padding-left:1.25rem;margin-top:0.5rem;}
-    /* submissions list */
-    .submissions ul{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem;}
-    .submissions li{
+
+    /* ---------- WEEKLY SUBMISSIONS ---------- */
+    .weeks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;list-style:none;padding-left:0;margin-top:0.5rem;}
+    .week-card{
       background:var(--cream);
       border:1px solid #e4e1d8;
-      border-radius:8px;
-      padding:1rem;
-      text-align:center;
-      font-weight:600;
-      color:var(--brand);
+      border-radius:10px;
+      padding:1.25rem 1rem 1.5rem;
+      display:flex;flex-direction:column;justify-content:space-between;min-height:140px;box-shadow:0 2px 6px rgba(0,0,0,0.07);
+      transition:transform 0.15s ease, box-shadow 0.15s ease;
     }
-    .submissions li a{text-decoration:none;color:inherit;}
-    .submissions li a:hover{text-decoration:underline;}
+    .week-card:hover{transform:translateY(-4px);box-shadow:0 6px 12px rgba(0,0,0,0.1);}   
+    .week-card h4{font-size:1.1rem;font-weight:600;margin-bottom:0.35rem;color:var(--brand);}   
+    .week-card p{font-size:0.9rem;line-height:1.45;color:#444;flex-grow:1;}
+    .week-card a{margin-top:0.75rem;align-self:flex-start;background:var(--panel-blue);color:#fff;padding:0.35rem 0.8rem;font-size:0.85rem;border-radius:4px;text-decoration:none;}
+    .week-card a:hover{background:#526fcc;}
+
     /* footer */
     footer{text-align:center;font-size:0.8rem;color:#888;margin:3rem 0 1rem;}
     @media(max-width:700px){
@@ -78,7 +81,6 @@
     /* hide publications until selected */
     #publications{display:none;}
     #publications:target{display:block;}
-    .orcid{font-weight:400;font-size:0.8rem;color:var(--brand);} 
   </style>
 </head>
 <body>
@@ -101,7 +103,7 @@
     </div>
     <div class="right">
       <h1><span class="greet">Hello,</span><br><span class="intro">My name is Martina Mchenga, a Health Economist.</span></h1>
-      <p>Passionate about leveraging evidence &amp; economic insights to advance Universal Health Coverage, gender‑responsive financing, and adolescent health in Africa.</p>
+      <p>Passionate about leveraging evidence & economic insights to advance Universal Health Coverage, gender‑responsive financing, and adolescent health in Africa.</p>
     </div>
   </section>
 
@@ -119,21 +121,36 @@
     </ul>
   </section>
 
-  <!-- Publications -->
-  <section class="content" id="publications">
-    <h3>Selected Publications</h3>
-    <ul>
-      <li><a href="https://humanities.uct.ac.za/cssr/publication/wp-477" target="_blank" rel="noopener">Mchenga, M. et al. (2025). Scoping review of economic evaluation of HIV/AIDS prevention interventions among adolescent girls and young women in sub‑Saharan Africa. <em>CSSR Working Paper 477</em>.</a></li>
-      <li>O’Donovan, J. et al. (2024). The role and recognition of community health workers in research – a global survey. <em>The Lancet Global Health</em>, 12(12), e1923‑e1925.</li>
-      <li><a href="https://doi.org/10.1007/s40258-024-00930-z" target="_blank" rel="noopener">Mchenga, M. et al. (2024). Value is Gendered: The need for sex and gender considerations in health economic evaluations. <em>Applied Health Economics &amp; Health Policy</em>.</a></li>
-      <li><a href="https://doi.org/10.1186/s12889-024-18903-1" target="_blank" rel="noopener">Hertzog L. et al. (2024). Social protection as a strategy for HIV prevention, education promotion and child‑marriage reduction among adolescents: A cross‑sectional study in Lesotho. <em>BMC Public Health</em>.</a></li>
-      <li><a href="https://doi.org/10.1371/journal.pone.0305341" target="_blank" rel="noopener">Mchenga, M. et al. (2024). Mental health is just an addendum: Stakeholder perceptions on COVID‑19 and mental‑health services in Malawi. <em>PLOS ONE</em>.</a></li>
-      <li><a href="https://doi.org/10.1016/j.jadohealth.2023.08.025" target="_blank" rel="noopener">Mchenga, M. (2023). Female genital mutilation and sexual‑risk behaviours of AGYW aged 15‑24 years in Sierra Leone. <em>Journal of Adolescent Health</em>.</a></li>
-      <li><a href="https://doi.org/10.1371/journal.pone.0274650" target="_blank" rel="noopener">Mchenga, M. et al. (2023). Can women’s exit‑interview reports track progress in antenatal‑care quality? Evidence from Malawi. <em>PLOS ONE</em>.</a></li>
-      <li><a href="https://doi.org/10.3389/frhs.2021.786186" target="_blank" rel="noopener">Mchenga, M. et al. (2022). Constructing Universal Health Coverage for Malawi. <em>Frontiers in Health Services</em>.</a></li>
-      <li><a href="https://doi.org/10.1016/j.heliyon.2022.e11316" target="_blank" rel="noopener">Kainja, J. et al. (2022). Umunthu, COVID‑19 and mental health in Malawi. <em>Heliyon</em>.</a></li>
-      <li><a href="https://doi.org/10.1093/heapol/czab090" target="_blank" rel="noopener">Mwale, M. & Mchenga, M. et al. (2021). Spatial analysis of out‑of‑pocket payments for healthcare. <em>Health Policy &amp; Planning</em>.</a></li>
-      <li><a href="https://doi.org/10.1016/j.wdp.2021.100374" target="_blank" rel="noopener">Mwale, M., Chirwa G.C., Mchenga, M. et al. (2021). Micro‑finance and women’s perception of domestic violence in a fragile state. <em>World Development Perspectives</em>.</a></li>
-      <li><a href="http://dx.doi.org/10.13140/RG.2.2.24915.71205" target="_blank" rel="noopener">Burger, R. & Mchenga, M. (2021). Anticipating the impact of COVID‑19 on health inequality in South Africa. <em>PEP Working Paper</em>.</a></li>
-      <li><a href="https://doi.org/10.1186/s12913-019-4130-1" target="_blank" rel="noopener">Mchenga, M. et al. (2019). Impact of WHO‑focused antenatal‑care policy on service quality in Malawi. <em>BMC Health Services Research</em>.</a></li>
-      <li><a href="https://doi.org/10.1186/s12939-017-0515-0" target="_blank" rel="noopener">Mchenga,...
+  <!-- Weekly Submissions -->
+  <section class="content" id="weekly-submissions">
+    <h3>Weekly Submissions</h3>
+    <ul class="weeks-grid">
+      <li class="week-card">
+        <h4>Week 1</h4>
+        <p>Prompt engineering & portfolio setup.</p>
+        <a href="https://martinamchenga.github.io/Mchenga_portifolio/" target="_blank" rel="noopener">View&nbsp;Submission</a>
+      </li>
+      <li class="week-card">
+        <h4>Week 2</h4>
+        <p>Data wrangling with no‑code AI.</p>
+        <span style="opacity:0.6;font-size:0.85rem;">Coming&nbsp;soon</span>
+      </li>
+      <li class="week-card">
+        <h4>Week 3</h4>
+        <p>Literature triage & synthesis automation.</p>
+        <span style="opacity:0.6;font-size:0.85rem;">Coming&nbsp;soon</span>
+      </li>
+      <li class="week-card">
+        <h4>Week 4</h4>
+        <p>Custom chatbots for repetitive tasks.</p>
+        <span style="opacity:0.৬;font-size:0.85rem;">Coming&nbsp;soon</span>
+      </li>
+      <li class="week-card">
+        <h4>Week 5</h4>
+        <p>AI‑assisted analysis & visualization.</p>
+        <span style="opacity:0.6;font-size:0.85rem;">Coming&nbsp;soon</span>
+      </li>
+      <li class="week-card">
+        <h4>Week 6</h4>
+        <p>Automating slide decks & reports.</p>
+        <span style="opacity:0.6;font-size:0.85rem;">Coming&nbsp
