@@ -18,8 +18,8 @@
     /* ---------- NAV ---------- */
     .nav{background:var(--cream);border-bottom:1px solid #d5d2c9;padding:0.8rem 1.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20;}
     .brand{font-weight:600;font-size:1.1rem;color:var(--brand);}
-    .nav ul{list-style:none;display:flex;gap:1.25rem;}
-    .nav a{color:var(--panel-blue);text-decoration:none;font-size:0.9rem;}
+    .nav ul{list-style:none;display:flex;gap:1.25rem;flex-wrap:wrap;}
+    .nav a{color:var(--panel-blue);text-decoration:none;font-size:0.9rem;white-space:nowrap;}
     .nav a:hover{text-decoration:underline;}
 
     /* ---------- HERO ---------- */
@@ -43,6 +43,9 @@
     .week-card a{margin-top:0.75rem;align-self:flex-start;background:var(--panel-blue);color:#fff;padding:0.35rem 0.8rem;font-size:0.85rem;border-radius:4px;text-decoration:none;}
     .week-card a:hover{background:#526fcc;}
 
+    /* ---------- FORM CONTAINER ---------- */
+    .form-container{background:var(--cream);padding:1rem;border:1px solid #e4e1d8;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.07);}    
+
     /* ---------- PUBLICATIONS ---------- */
     .pub-list{list-style:disc;padding-left:1.25rem;}
     .pub-list li{margin-bottom:0.6rem;}
@@ -60,6 +63,7 @@
       <li><a href="#about-course">Course</a></li>
       <li><a href="#weekly-submissions">Submissions</a></li>
       <li><a href="#publications">Publications</a></li>
+      <li><a href="#contact-consultation">Consultation</a></li>
       <li><a href="https://drive.google.com/file/d/1HbDiD65lG71KiW2kIHOO6fojo2lKySEP/view?usp=sharing" target="_blank" rel="noopener">Download&nbsp;CV</a></li>
     </ul>
   </nav>
@@ -103,13 +107,21 @@
     </ul>
   </section>
 
-  <!-- Publications (sample—add the rest of your list here) -->
+  <!-- Publications -->
   <section class="content" id="publications">
     <h3>Publications</h3>
     <ul class="pub-list">
       <li><a href="https://humanities.uct.ac.za/cssr/publication/wp-477" target="_blank">Mchenga M. et al. (2025). Scoping review of economic evaluation of HIV/AIDS prevention interventions among AGYW in sub-Saharan Africa. <em>CSSR Working Paper 477</em>.</a></li>
       <!-- …other items… -->
     </ul>
+  </section>
+
+  <!-- Contact for Consultation -->
+  <section class="content" id="contact-consultation">
+    <h3>Contact for Consultation</h3>
+    <div class="form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdiZxHXHVvf6-VG2pxlGa_W85k3-pgp6YynQ2Tu-OLyEEuO5g/viewform?embedded=true" width="100%" height="856" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
   </section>
 
   <footer>&copy; 2025 Martina Mchenga</footer>
